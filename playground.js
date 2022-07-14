@@ -119,3 +119,86 @@
 //     7, 8, 9,
 //   ])
 // );
+
+//strings
+// const howManyLetters = () => {
+//   const phrase = "hey, count how many letters there are there.";
+//   for (const letter of phrase) {
+//     console.log(letter);
+//   }
+// };
+// howManyLetters();
+
+// const howManyLetters = (phrase) => {
+//   let result = 0;
+//   for (const index in phrase) {
+//     console.log(Number(index) + 1);
+//     result = Number(index) + 1;
+//   }
+//   return { result };
+//alternative
+//return{result:phrase.lenght}
+// };
+// const phrase = prompt("write your phrase");
+// howManyLetters(phrase);
+
+// const sumArray = (numbers) => {
+//   let result = 0;
+
+//   for (const number of numbers) {
+//     console.log(number);
+//     result = result + number;
+//   }
+//   return { result };
+// };
+// const nums = [12, 3, 4, 5, 6, 7, 8, 9];
+// console.log(sumArray(nums));
+
+// const max = (numbers) => {
+//   let result = numbers[0];
+
+//   for (const number of numbers) {
+//     if (number > result) {
+//       result = number;
+//     }
+//   }
+//   return result;
+// };
+
+// console.log(max([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+
+// const letterFrequency = (phrase) => {
+//   console.log(phrase);
+//   //make "frequency" object {}
+//   let frequency = {};
+//   for (const letter of phrase) {
+//     //check if letter exists
+//     if (letter in frequency) {
+//       //increment value by +1
+//       frequency[letter] = frequency[letter] + 1;
+//       //otherwise, set value to 1
+//     } else {
+//       frequency[letter] = 1;
+//     }
+//   }
+//   return frequency;
+// };
+
+// console.log(letterFrequency("Hello there."));
+
+const wordFrequency = (phrase) => {
+  console.log(phrase);
+  let frequency = {};
+  words = phrase.split(" ");
+  for (const word of words) {
+    if (word in frequency) {
+      frequency[word] += 1;
+    } else {
+      frequency[word] = 1;
+    }
+  }
+  return frequency;
+};
+console.log(wordFrequency("Hello world. Hello friend."));
+
+
