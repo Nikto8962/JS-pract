@@ -255,7 +255,7 @@
 // });
 
 // console.log(result);
-=======
+
 //variables
 // const, var, int
 
